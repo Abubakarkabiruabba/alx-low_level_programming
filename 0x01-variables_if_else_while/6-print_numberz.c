@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-/* we are to use the ascii code for 0 to 9 which is 48 to 57 */
-for (int i = 0; i < 10; i++)
+	int num;
+for (num = 0; num < 10; num++)
 {
-	putchar((i % 10) + '0');
+	putchar((num % 10) + '0');
 }
 	putchar('\n');
 	return (0);
