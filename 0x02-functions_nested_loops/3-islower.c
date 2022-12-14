@@ -5,16 +5,16 @@
  * _islower - prints whether an alphabet is lower or otherwise
  *@c: the argument to be checked
  *
- * Return: 0 if lower, 1 if upper
+ * Return: 1 if lower, 0 if upper
  */
 int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
