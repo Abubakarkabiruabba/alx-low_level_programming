@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - Indicate whether an int is alphabet or otherwise
+ *@c: inputted argument
  *
  * Return: 1 if c is letter, 0 if number
  */
