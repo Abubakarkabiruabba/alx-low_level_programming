@@ -17,12 +17,12 @@ void times_table(void)
 			int times = i * j;
 			if (times < 10)
 			{
-				_putchar('0' + value);
+				_putchar('0' + times);
 			}
 			else
 			{
-				_putchar((value / 10) + '0');
-				_putchar((value % 10) + '0');
+				_putchar((times / 10) + '0');
+				_putchar((times % 10) + '0');
 			}
 			_putchar(',');
 			_putchar(' ');
