@@ -20,6 +20,11 @@ int largest_number(int a, int b, int c)
 	{
 		largest = b;
 	}
+	else if (a == b || b == c || c == a)
+	{
+		largest = a > b ? a : b;
+		largest = largest > c ? largest : c;
+	}
 	else
 	{
 		largest = c;
