@@ -1,22 +1,22 @@
 #include "main.h"
 
 /**
- * more_numbers - print 0 to 14 ten times
- * @x: first declared int
- * @y: second declared int
+ * more_numbers - prints numbers between 0 to 14
+ * 10 times.
+ * Return: no return.
  */
 void more_numbers(void)
 {
-	int x, y;
+	int i, ch;
 
-	for (x = 0; x <= 9; x++)
+	for (i = 0; i < 10; i++)
 	{
-		for (y = 0; y <= 14; y++)
+		for (ch = 0; ch < 15; ch++)
 		{
-			if (y >= 10)
-				putchar((y / 10) + '0');
-				putchar((y % 10) + '0');
+			if (ch >= 10)
+				putchar((ch / 10) + 48);
+			putchar((ch % 10) + 48);
 		}
-	putchar('\n');
+		putchar('\n');
 	}
 }
