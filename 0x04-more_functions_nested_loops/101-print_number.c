@@ -1,35 +1,49 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer.
- * @n: input integer.
- * Return: no return.
- */
+ * print_number - prints an integer
+ * @n: random integer
+ *Return: void
+ **/
+
 void print_number(int n)
 {
-	unsigned int m, d, count;
+	char ld, cr;
+	int r;
+	int ct = 0;
 
 	if (n < 0)
 	{
-		putchar(45);
-		m = n * -1;
-	}
-	else
-	{
-		m = n;
+		_putchar ('-');
+		ld = (char)('0' - (n % 10));
+		n = n / -10;
 	}
 
-	d = m;
-	count = 1;
-
-	while (d > 9)
-	{
-		d /= 10;
-		count *= 10;
+		else
+		{
+			ld = (char)((n % 10) + '0');
+		n = n / 10;
 	}
 
-	for (; count >= 1; count /= 10)
+	r = 0;
+	while (n > 0)
 	{
-		putchar(((m / count) % 10) + 48);
+		r = r * 10 + (n % 10);
+		n = n / 10;
+		ct++;
 	}
+
+	while (r > 0)
+	{
+		cr = (char)((r % 10) + '0');
+		_putchar(cr);
+		r = r / 10;
+		ct--;
+	}
+	while (ct != 0)
+	{
+		_putchar('0');
+			ct--;
+	}
+	_putchar(ld);
 }
