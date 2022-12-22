@@ -1,9 +1,9 @@
 #include "main.h"
 
-/*
- * *_strcat - concetenate two strings
- *@*dest: firsr input
- *@*src: second input
+/**
+ * _strcat - concetenate two strings
+ *@dest: firsr input
+ *@src: second input
  *
  * Return:  dest
  */
