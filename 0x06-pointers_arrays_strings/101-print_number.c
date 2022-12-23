@@ -5,22 +5,20 @@
  * @n: integer params
  * Return: 0
  */
-
 void print_number(int n)
 {
-	unsigned int n1;
-
-	n1 = n;
-
 	if (n < 0)
 	{
 		_putchar('-');
-		n1 = -n;
+		n = -n;
 	}
+	int divisor = 1;
 
-	if (n1 / 10 != 0)
+	while (n / divisor >= 10)
+		divisor *= 10;
+	while (divisor >= 1)
 	{
-		print_number(n1 / 10);
+		_putchar((n / divisor) % 10 + '0');
+		divisor /= 10;
 	}
-	_putchar((n1 % 10) + '0');
 }
