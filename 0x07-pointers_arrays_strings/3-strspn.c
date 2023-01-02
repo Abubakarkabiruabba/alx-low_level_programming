@@ -1,20 +1,30 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - Entry point
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
  *
  * Return: 0
  */
-int main(void)
+unsigned int _strspn(char *s, char *accept);
 {
-	char *s = "hello";
-	char *f;
+	unsigned int n = 0;
+	int r;
 
-	f = _strchr(s, '1');
-	if (f != NULL)
+	while (*s)
 	{
-		printf("%s\n", f);
+		for (r = 0; accept[r]; r++)
+		{
+			if (*s == accept[r])
+			{
+				n++;
+				break;
+			}
+			else if (accept[r + 1] == '\0')
+				return (n);
+		}
+		s++
 	}
-	return (0);
+	return (n);
 }
