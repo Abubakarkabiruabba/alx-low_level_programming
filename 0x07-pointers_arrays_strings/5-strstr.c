@@ -9,7 +9,8 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	for (unsigned int i = 0; haystack[i] != '\0'; i++)
+	unsigned int i;
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		if (haystack[i] == needle[0])
 		{
