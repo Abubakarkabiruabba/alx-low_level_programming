@@ -16,12 +16,8 @@ int _sqrt_recursion(int n)
 		return (n);
 
 	result = _sqrt_recursion(n - 1);
-	if (result > 1)
-	{
-		return (-1);
-	}
+	if (result * result == n)
+		return (result);
 	else
-	{
-		return (1);
-	}
+		return (-1);
 }
