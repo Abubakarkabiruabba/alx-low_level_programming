@@ -12,10 +12,9 @@ int is_palindrome(char *s)
 
 	if (len <= 1)
 		return (1);
-	if (s[0] == s[len - 1])
-		return (is_palindrome(s + 1, len - 2));
-	else
+	if (s[0] != s[len - 1])
 		return (0);
+	return (is_palindrome(s + 1));
 }
 /**
  * _strlen - returns the length of a string
