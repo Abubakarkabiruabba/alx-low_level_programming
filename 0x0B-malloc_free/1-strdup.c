@@ -19,7 +19,7 @@ char *_strdup(char *str)
 		return (NULL);
 	while (str[len])
 		len++;
-	duplicate = malloc(sizeof(char) * (len + i));
+	duplicate = malloc(sizeof(char) * (len + i + 1));
 	if (duplicate == NULL)
 		return (NULL);
 	while ((duplicate[i] = str[i]) != '\0')
