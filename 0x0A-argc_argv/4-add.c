@@ -52,7 +52,8 @@ sum += str_to_int;
 /*Condition if one of the number contains symbols that are not digits*/
 else
 {
-printf("Error\n");                           return (1);
+printf("Error\n");
+	return (1);
 }
 count++;
 }
